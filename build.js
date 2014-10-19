@@ -8,7 +8,6 @@ var config = {
     out: 'dist/ichimon-min.js'
 };
 
-
 requirejs.optimize(config, function (buildResponse) {
     //append a returned requirejs define so sumo is requirejs compatible
     fs.appendFile(config.out, 'define(["main"], function (main) { return main; });', function (err) {
